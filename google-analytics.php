@@ -35,14 +35,14 @@ defined( 'ABSPATH' ) ? : die();
 function psp_add_googleanalytics() { ?>
      
   <!-- Global site tag (gtag.js) - Google Analytics - IP Anonymized -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php get_option('ga_tracking_id') ?>"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo get_option('ga_tracking_id'); ?>"></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag( 'config', '<?php get_option('ga_tracking_id') ?>', { 'anonymize_ip' : true } );
+    gtag( 'config', '<?php echo get_option('ga_tracking_id'); ?>', { 'anonymize_ip' : true } );
   </script>
  
 <?php }
